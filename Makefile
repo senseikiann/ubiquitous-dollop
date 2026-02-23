@@ -4,5 +4,5 @@ OBJCOPY=arm-none-eabi-objcopy
 CFLAGS=-mcpu=cortex-m3 -mthumb -O2
 
 all:
-	$(CC) $(CFLAGS) main.c -o firmware.elf
+	$(CC) $(CFLAGS) main.c -nostdlib -o firmware.elf
 	$(OBJCOPY) -O binary firmware.elf firmware.bin
